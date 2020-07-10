@@ -1,6 +1,6 @@
 # ML_GPU
 ### This project containts personal practice ML code, and Deep Learning on GPUs.
-<div style="text-align:center"><a href=http://www.hep.ucl.ac.uk/~lukicov target="_blank"><img src="docs/gpu.jpeg" height="550"></a></div>
+<div style="text-align:center"><a href=http://www.hep.ucl.ac.uk/~lukicov target="_blank"><img src="docs/gpu.jpeg" height="450"></a></div>
 <i>Photo by Caspar Camille Rubin on Unsplash.</i>
 
 
