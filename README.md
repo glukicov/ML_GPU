@@ -1,8 +1,7 @@
 # ML_GPU
 ### This project containts personal practice ML code, and Deep Learning on GPUs.
-<div style="text-align:center"><a href=http://www.hep.ucl.ac.uk/~lukicov target="_blank"><img src="docs/gpu.jpeg" height="350"></a></div>
-<i>Photo by Caspar Camille Rubin on Unsplash.</i><br>
-<i>Milkshake is optional for the GPU set-up.</i>
+<div style="text-align:center"><a href=http://www.hep.ucl.ac.uk/~lukicov target="_blank"><img src="docs/gpu.jpeg" height="550"></a></div>
+<i>Photo by Caspar Camille Rubin on Unsplash.</i>
 
 
 ### At the moment, I am learning, and following examples, from <a href=https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/ target="_blank">Aurelien Geron's "Hands-On Machine Learning" book</a><br>
