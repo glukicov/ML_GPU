@@ -1,7 +1,7 @@
 # ML_GPU
 ### This project containts personal practice ML code, and Deep Learning on GPUs.
 <div style="text-align:center"><a href=http://www.hep.ucl.ac.uk/~lukicov target="_blank"><img src="docs/gpu.jpeg" height="280"></a></div>
-<i>Photo by Caspar Camille Rubin on Unsplash.</i>
+<i>Photo by Caspar Camille Rubin on Unsplash.</i><br>
 <i>Milkshake is optional for the GPU set-up.</i>
 
 
