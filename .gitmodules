@@ -1,0 +1,3 @@
+[submodule "handson-ml2"]
+	path = handson-ml2
+	url = https://github.com/ageron/handson-ml2.git
