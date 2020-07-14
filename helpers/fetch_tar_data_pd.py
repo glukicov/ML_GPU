@@ -1,56 +1,63 @@
 #Download and unpack tar file from url 
 #Author: Gleb Lukicov
-import os, argparse, tarfile, urllib
+# --fetch or --pd 
+# run from JLab e.g. 
+# %run helpers/fetch_tar_data_pd.py --fetch --url="https://raw.github..."s
+import os, sys, argparse, tarfile, urllib
 import pandas as pd
 
-#Resolve system vars 
-print("Assuming ENV path to project", os.environ.get('ML_PATH'))
-local_path=os.environ.get('ML_PATH')+"/DATA/"
+#globals 
+last_percent_reported=-1 
 
-# --fetch or --pd 
-# run from JLab e.g. run helpers/fetch_tar_data_pd.py --fetch 
 parser = argparse.ArgumentParser()
-parser.add_argument("--url", help="URL base", type=str, 
-                    default="https://raw.githubusercontent.com/ageron/handson-ml2/master/")
-parser.add_argument("--path", help="path to file", type=str, default="datasets/housing/")
-parser.add_argument("--file", help="file name", type=str, default="housing.tgz")
+parser.add_argument("--url", help="full URL to file", type=str)
+parser.add_argument("--local_path", help="local path to save tgz to", type=str, default=None)
 parser.add_argument("--fetch", help="download and unpack", action="store_true")
-parser.add_argument("--pd", help="return PD", action="store_true")
 args = parser.parse_args()
 
-full_path = args.url + "/" + args.path + "/" + args.file
+#Resolve system vars for local download path 
+if(args.local_path == None):
+    print("Assuming ENV path to the project", os.environ.get('ML_PATH'))
+    local_path=os.path.join(os.environ.get('ML_PATH'), "DATA")
 
 def main():
 
     if(args.fetch):
-        print("Getting file...", full_path)
+        print("Getting file", args.url)
         fetch_tar_data()
 
-    if(args.pd):
-        print("Returning pandas DF from", full_path)
-        return_pd()
 
-
-def fetch_tar_data(housing_url=full_path, path=args.path, file=args.file):
+def fetch_tar_data(url=args.url):
     '''
     Download single tar file and unpack 
     ''' 
-    tgz_path=local_path+"/"+path
-    print("Creating new dir", tgz_path)
-    os.makedirs(tgz_path, exist_ok=True) 
-    print("Downloading", housing_url)
-    urllib.request.urlretrieve(housing_url)
-    # print("Opening", housing_url)
-    # housing_tgz = tarfile.open(tgz_path+"/"+file) 
-    # print("Extracting", housing_url)
-    # housing_tgz.extractall(path=tgz_path) 
-    # print("Done", housing_url)
-    # housing_tgz.close()
-    print(os.listdir(tgz_path))
+    tgz_file=os.path.join(local_path, url.split("/")[-1])
 
-def return_pd(path=args.path, file=args.file): 
-    csv_path = os.path.join(path, file) 
-    return pd.read_csv(csv_path)
+    print("Downloading", url)
+    urllib.request.urlretrieve(url, tgz_file, reporthook=download_progress_hook)
+    
+    print("Extracting", tgz_file)
+    housing_tgz = tarfile.open( tgz_file ) 
+    housing_tgz.extractall(path=local_path)
+       
+    print("Removing .tgz file")
+    housing_tgz.close()
+    os.remove(tgz_file)
+
+    print("ls in", local_path, ":", os.listdir(local_path))
+
+
+def download_progress_hook(count, blockSize, totalSize, increment=10):
+    '''
+    Print progress every %increment
+    '''
+    global last_percent_reported
+    percent = int(count * blockSize * 100 / totalSize)
+    if last_percent_reported != percent:
+        if percent % increment == 0: sys.stdout.write("%s%%" % percent); sys.stdout.flush();
+        else: sys.stdout.write("."); sys.stdout.flush();
+        last_percent_reported = percent
+    if (percent % 100==0 and percent != 0): sys.stdout.write("\n");
 
 if __name__=="__main__":
     main()
