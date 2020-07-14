@@ -2,6 +2,7 @@
 # Custom MPL style
 
 # TODO add, minor ticks (inout), larger fontsizes etc.
+# https://matplotlib.org/3.2.2/tutorials/introductory/customizing.html
 
 ### Figures
 figure.titlesize : 16 
