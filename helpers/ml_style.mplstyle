@@ -1,12 +1,31 @@
 # Gleb Lukicov
 # Custom MPL style
 
+# TODO add, minor ticks (inout), larger fontsizes etc.
+
+### Figures
+figure.titlesize : 16 
+figure.facecolor: 1.0
+figure.autolayout: false
+# 4:3 aspect ratio and high dpi
+# figure.figsize: 4.8, 3.6
+figure.dpi: 200
+savefig.dpi: 200
+
+### Legend
+legend.frameon: true
+legend.scatterpoints: 3
+legend.fontsize: 14
+
+
+### Lines
 lines.linewidth: 1.5
 lines.markersize: 4
 
 # colour cycles
 axes.prop_cycle: cycler('color', ['458707', '7a0202', 'd55e00', 'cc79a7', '3923a6', '000001', '458707'])
 
+### Axes
 # add spines 
 axes.spines.left: true
 axes.spines.bottom: true
@@ -24,32 +43,29 @@ xtick.major.size: 1.5
 xtick.minor.size: 1
 xtick.minor.visible: True
 xtick.labelsize: 13
+xtick.direction: inout
+
 ytick.major.size: 1.5
 ytick.minor.size: 1
 ytick.minor.visible: True
 ytick.labelsize: 13
+ytick.direction: inout
+
+xtick.major.top     : True    ## draw x axis top major ticks
+xtick.major.bottom  : True    ## draw x axis bottom major ticks
+xtick.minor.top     : True    ## draw x axis top minor ticks
+xtick.minor.bottom  : True    ## draw x axis bottom minor ticks
 
 
 # no grid
 grid.linewidth: 0
 
-# Legend
-legend.frameon: true
-legend.scatterpoints: 3
-legend.fontsize: 14
-
-figure.facecolor: 1.0
-figure.autolayout: false
-# 4:3 aspect ratio and high dpi
-figure.figsize: 4.8, 3.6
-figure.dpi: 200
-savefig.dpi: 200
-
+### Image
 image.interpolation: nearest
 image.cmap: green  # single colour map 
 image.resample: false
 
-# Box plots
+# Box plot
 boxplot.flierprops.marker: .
 boxplot.flierprops.markerfacecolor: 458707
 boxplot.flierprops.markeredgecolor: 458707
