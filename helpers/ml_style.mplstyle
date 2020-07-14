@@ -1,0 +1,64 @@
+# Gleb Lukicov
+# Custom MPL style
+
+lines.linewidth: 1.5
+lines.markersize: 4
+
+# colour cycles
+axes.prop_cycle: cycler('color', ['458707', '7a0202', 'd55e00', 'cc79a7', '3923a6', '000001', '458707'])
+
+# add spines 
+axes.spines.left: true
+axes.spines.bottom: true
+axes.spines.top: true
+axes.spines.right: true
+
+# axis labels
+axes.labelsize: 14
+
+# Use thicker axes
+axes.linewidth: 1.1
+
+# Add major and minor ticks
+xtick.major.size: 1.5
+xtick.minor.size: 1
+xtick.minor.visible: True
+xtick.labelsize: 13
+ytick.major.size: 1.5
+ytick.minor.size: 1
+ytick.minor.visible: True
+ytick.labelsize: 13
+
+
+# no grid
+grid.linewidth: 0
+
+# Legend
+legend.frameon: true
+legend.scatterpoints: 3
+legend.fontsize: 14
+
+figure.facecolor: 1.0
+figure.autolayout: false
+# 4:3 aspect ratio and high dpi
+figure.figsize: 4.8, 3.6
+figure.dpi: 200
+savefig.dpi: 200
+
+image.interpolation: nearest
+image.cmap: green  # single colour map 
+image.resample: false
+
+# Box plots
+boxplot.flierprops.marker: .
+boxplot.flierprops.markerfacecolor: 458707
+boxplot.flierprops.markeredgecolor: 458707
+boxplot.flierprops.markersize: 2
+boxplot.boxprops.color: 458707
+boxplot.boxprops.linewidth: 1
+boxplot.whiskerprops.linestyle: -
+boxplot.whiskerprops.color: 458707
+boxplot.whiskerprops.linewidth: 1
+boxplot.capprops.linewidth: 0
+boxplot.medianprops.linewidth: 1
+boxplot.medianprops.color: d55e00
