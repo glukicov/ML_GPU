@@ -1,3 +1,4 @@
+### `handson-ml2/` is a forked subtree from https://github.com/ageron/handson-ml2 (full credit to the code in this repo goes to the authors of handson-ml2) <br>
 Machine Learning Notebooks
 ==========================
 
