@@ -3,6 +3,9 @@
 
 # https://matplotlib.org/3.2.2/tutorials/introductory/customizing.html
 
+# %matplotlib widget control
+#fig.canvas.layout.width = 100%
+#fig.canvas.layout.height = 900px
 
 # font
 font.family: sans-serif
