@@ -1,32 +1,49 @@
 # Gleb Lukicov
 # Custom MPL style
 
-# TODO add, minor ticks (inout), larger fontsizes etc.
 # https://matplotlib.org/3.2.2/tutorials/introductory/customizing.html
 
+
+# font
+font.family: sans-serif
+font.sans-serif: Arial, helvetica, Helvetica, Nimbus Sans L, Mukti Narrow, FreeSans
+font.size: 18
+pdf.fonttype: 42
+ps.fonttype: 42
+mathtext.fontset: stixsans
+mathtext.default: rm
+
+
 ### Figures
-figure.titlesize : 16 
-figure.facecolor: 1.0
+figure.titlesize : 12 
+figure.facecolor: white
 figure.autolayout: false
-# 4:3 aspect ratio and high dpi
-# figure.figsize: 4.8, 3.6
-figure.dpi: 200
-savefig.dpi: 200
+# figure.figsize: 4.8, 3.6 # 4:3 aspect ratio
+figure.figsize: 6, 3.5
+figure.dpi: 300
+savefig.dpi: 300
+figure.subplot.bottom: 0.16
+figure.subplot.top: 0.93
+figure.subplot.left: 0.16
+figure.subplot.right: 0.95
 
 ### Legend
-legend.frameon: true
-legend.scatterpoints: 3
-legend.fontsize: 14
-
+legend.frameon: False
+legend.scatterpoints: 1
+legend.numpoints: 1
+legend.fontsize: 10
+legend.labelspacing: 0.3
 
 ### Lines
-lines.linewidth: 1.5
-lines.markersize: 4
+lines.linewidth: 2
+lines.markersize: 8
 
 # colour cycles
 axes.prop_cycle: cycler('color', ['458707', '7a0202', 'd55e00', 'cc79a7', '3923a6', '000001', '458707'])
 
 ### Axes
+axes.unicode_minus : False
+
 # add spines 
 axes.spines.left: true
 axes.spines.bottom: true
@@ -34,28 +51,33 @@ axes.spines.top: true
 axes.spines.right: true
 
 # axis labels
-axes.labelsize: 14
+axes.labelsize: 12
 
 # Use thicker axes
 axes.linewidth: 1.1
 
 # Add major and minor ticks
-xtick.major.size: 1.5
-xtick.minor.size: 1
+xtick.major.size: 4
+xtick.minor.size: 2.5
 xtick.minor.visible: True
-xtick.labelsize: 13
-xtick.direction: inout
+xtick.labelsize: 11
+xtick.direction: in
 
-ytick.major.size: 1.5
-ytick.minor.size: 1
+
+ytick.major.size: 4
+ytick.minor.size: 2.5
 ytick.minor.visible: True
-ytick.labelsize: 13
-ytick.direction: inout
+ytick.labelsize: 11
+ytick.direction: in
 
-xtick.major.top     : True    ## draw x axis top major ticks
-xtick.major.bottom  : True    ## draw x axis bottom major ticks
-xtick.minor.top     : True    ## draw x axis top minor ticks
-xtick.minor.bottom  : True    ## draw x axis bottom minor ticks
+
+xtick.top: True
+ytick.right: True
+
+#xtick.major.top     : True    ## draw x axis top major ticks
+#xtick.major.bottom  : True    ## draw x axis bottom major ticks
+#xtick.minor.top     : True    ## draw x axis top minor ticks
+#xtick.minor.bottom  : True    ## draw x axis bottom minor ticks
 
 
 # no grid
@@ -63,8 +85,10 @@ grid.linewidth: 0
 
 ### Image
 image.interpolation: nearest
-image.cmap: green  # single colour map 
+image.cmap: YlGn  # single colour map 
+#image.cmap: jet  # jet
 image.resample: false
+
 
 # Box plot
 boxplot.flierprops.marker: .
