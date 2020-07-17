@@ -1,8 +1,10 @@
-#Download and unpack tar file from url 
-#Author: Gleb Lukicov
-# --fetch or --pd 
-# run from JLab e.g. 
-# %run helpers/fetch_tar_data_pd.py --fetch --url="https://raw.github..."s
+'''
+Download and unpack tar file from url 
+Author: Gleb Lukicov
+--fetch or --pd 
+run from JLab e.g. 
+%run helpers/fetch_tar_data_pd.py --fetch --url="https://raw.github..."s
+'''
 import os, sys, argparse, tarfile, urllib
 import pandas as pd
 
