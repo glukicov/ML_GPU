@@ -7,13 +7,28 @@ import numpy as np
 from scipy import stats
 
 ### Stat functions
+
 def ci(pred, test, cl=0.95):
+    '''
+    t-score CI 
+    '''
     print("Calculating a",int(cl*100),"% CI...")
     squared_errors = (pred - test) ** 2
     DoF = len(squared_errors) - 1
     sample_mean = squared_errors.mean()
     sample_standard_error = stats.sem(squared_errors)
     return np.sqrt(  stats.t.interval( cl, DoF, loc=sample_mean, scale= sample_standard_error )  )
+
+def sigma(pred, test, cl=0.95):
+    '''
+    Standard score (z-score)
+    '''
+    print("Calculating a",int(cl*100),"% CI (z-score)...")
+    squared_errors = (pred - test) ** 2
+    N=len(squared_errors)
+    zscore = stats.norm.ppf((1 + cl) / 2)
+    zmargin = zscore * squared_errors.std(ddof=1) / np.sqrt(N)
+    np.sqrt(mean - zmargin), np.sqrt(mean + zmargin)
 
 
 ### Print-out functions 
