@@ -49,3 +49,12 @@ def params_grid(cv_results):
     dict_results  = sorted(dict(zip(np.sqrt(-cv_results["mean_test_score"]), cv_results["params"])).items())
     for item in dict_results:
         print (item)
+
+
+### Ease-of-life
+def save_fig(fig_path=".", fig_id="0", fig_extension="png", tight_layout=True, , resolution=300):
+    path = os.path.join(fig_path, fig_id + "." + fig_extension)
+    print("Saving figure", fig_id)
+    if tight_layout:
+        plt.tight_layout()
+    plt.savefig(path, format=fig_extension, dpi=resolution)

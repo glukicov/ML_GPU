@@ -5,3 +5,4 @@ path_to_file= os.path.join(os.environ.get('ML_PATH'),"helpers","ml_style.mplstyl
 plt.style.use('file://'+path_to_file)
 
 # mpl.use('Agg') # batch-mode 
+# mpl.use("TKAgg") # new window interactive display

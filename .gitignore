@@ -136,3 +136,5 @@ dmypy.json
 #Others
 *.exe
 hello
+.idea
+
