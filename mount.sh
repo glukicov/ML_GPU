@@ -3,6 +3,7 @@
 #-----------------------------------------------------------
 remotedir="USERNAME@HOST:/PATH/TO/MOUNT"  # TODO Add directory on the remote machine
 mountdir="/Users/user/Mount/Directory"   # TODO Add local directory 
+#-----------------------------------------------------------
 echo "Mounting (${mountdir})..."
 
 if [ -d "${mountdir}" ]; then
