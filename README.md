@@ -7,5 +7,11 @@
 
 
 At the moment, I am learning, and following examples from <a href=https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/ target="_blank">Aurelien Geron's "Hands-On Machine Learning" book</a>.  <br>
-`handson-ml2/` is a forked from https://github.com/ageron/handson-ml2 <br>
+
+Project structure
+============
+1. `helpers/` - Commonly used Python functions 
+2. `JupyterNB/` - Jupyter notebooks for prototyping and learning 
+3. `docs/` - Manuals/images/etc. 
+4. `handson-ml2/` is forked from https://github.com/ageron/handson-ml2 
 
