@@ -1,7 +1,6 @@
 # Gleb Lukicov
 # Custom MPL style
-
-# https://matplotlib.org/3.2.2/tutorials/introductory/customizing.html
+# See here for more options and info: https://matplotlib.org/3.2.2/tutorials/introductory/customizing.html
 
 # %matplotlib widget control
 #fig.canvas.layout.width = 100%
@@ -16,13 +15,12 @@ ps.fonttype: 42
 mathtext.fontset: stixsans
 mathtext.default: rm
 
-
 ### Figures
 figure.titlesize : 12 
 figure.facecolor: white
 figure.autolayout: false
-# figure.figsize: 4.8, 3.6 # 4:3 aspect ratio
-figure.figsize: 6, 3.5
+# figure.figsize: 4.8, 3.6 # aspect ratio
+figure.figsize: 6, 3.5 # aspect ratio
 figure.dpi: 300
 savefig.dpi: 300
 figure.subplot.bottom: 0.16
@@ -41,7 +39,7 @@ legend.labelspacing: 0.3
 lines.linewidth: 2
 lines.markersize: 8
 
-# colour cycles
+# colour cycles 
 axes.prop_cycle: cycler('color', ['458707', '7a0202', 'd55e00', 'cc79a7', '3923a6', '000001', '458707'])
 
 ### Axes
@@ -65,23 +63,17 @@ xtick.minor.size: 2.5
 xtick.minor.visible: True
 xtick.labelsize: 11
 xtick.direction: in
-
-
 ytick.major.size: 4
 ytick.minor.size: 2.5
 ytick.minor.visible: True
 ytick.labelsize: 11
 ytick.direction: in
-
-
 xtick.top: True
 ytick.right: True
-
 #xtick.major.top     : True    ## draw x axis top major ticks
 #xtick.major.bottom  : True    ## draw x axis bottom major ticks
 #xtick.minor.top     : True    ## draw x axis top minor ticks
 #xtick.minor.bottom  : True    ## draw x axis bottom minor ticks
-
 
 # no grid
 grid.linewidth: 0
@@ -93,7 +85,7 @@ image.cmap: YlGn  # single colour map
 image.resample: false
 
 
-# Box plot
+# Box plot (courtesy of https://github.com/elegant-scipy/elegant-scipy/blob/master/style/elegant.mplstyle)
 boxplot.flierprops.marker: .
 boxplot.flierprops.markerfacecolor: 458707
 boxplot.flierprops.markeredgecolor: 458707
