@@ -6,5 +6,6 @@
 <i>Photo by Caspar Camille Rubin on Unsplash.</i>
 
 
-### At the moment, I am learning, and following examples, from <a href=https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/ target="_blank">Aurelien Geron's "Hands-On Machine Learning" book</a>. `handson-ml2/` is a forked subtree from https://github.com/ageron/handson-ml2 (full credit to the code in this repo goes to the authors of handson-ml2) <br>
+At the moment, I am learning, and following examples from <a href=https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/ target="_blank">Aurelien Geron's "Hands-On Machine Learning" book</a>.  <br>
+`handson-ml2/` is a forked from https://github.com/ageron/handson-ml2 <br>
 
