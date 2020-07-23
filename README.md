@@ -5,7 +5,7 @@
 <div style="text-align:center"><a href=http://www.hep.ucl.ac.uk/~lukicov target="_blank"><img src="docs/gpu.jpeg" height="450"></a></div>
 <i>Photo by Caspar Camille Rubin on Unsplash.</i>
 
-
+<br>
 At the moment, I am learning, and following examples from <a href=https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/ target="_blank">Aurelien Geron's "Hands-On Machine Learning" book</a>.  <br>
 `handson-ml2/` is a forked from https://github.com/ageron/handson-ml2 <br>
 
