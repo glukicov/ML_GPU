@@ -54,7 +54,7 @@ def params_grid(cv_results):
 
 
 ### Ease-of-life
-def save_fig(fig_path=".", fig_id="0", fig_extension="png", tight_layout=True, , resolution=300):
+def save_fig(fig_path=".", fig_id="0", fig_extension="png", tight_layout=True, resolution=300):
     path = os.path.join(fig_path, fig_id + "." + fig_extension)
     print("Saving figure", fig_id)
     if tight_layout:
