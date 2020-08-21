@@ -7,7 +7,7 @@ scikit-learn
 xgboost
 transformers
 tensorflow
-tensorflow-serving-gpu
+tensorflow-gpu
 tensorflow-serving-api
 tensorflow-serving-api-gpu
 tensorboard
