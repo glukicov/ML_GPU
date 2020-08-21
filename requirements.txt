@@ -7,16 +7,14 @@ scikit-learn
 xgboost
 transformers
 tensorflow
-tensorflow-gpu
 tensorflow-serving-api
-tensorflow-serving-api-gpu
 tensorboard
 tensorboard-plugin-profile
 tensorflow-datasets
 tensorflow-hub
-tensorflow-probability
-tfx
-tensorflow-addons
+# tensorflow-probability
+# tfx
+# tensorflow-addons
 atari_py
 tf-agents
 imageio
